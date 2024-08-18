@@ -55,8 +55,9 @@ After normalising the data and running the PPCA pipeline, the first three princi
 | i_55 |  0.27 |  0.51 |  0.16 |
 | i_56 |  0.36 |  0.44 |  0.04 |
 
- <br />  
+ 
 #### PC1 Factor Loadings
+
 - Economic Inactivity rate (-0.33)
 - Unemployment rate (-0.31)
 - Weekly Income (+0.37)
