@@ -1,4 +1,4 @@
-# Quality of Life Index - England Councils
+# Quality of Life Index - England Local Authority Districts 
 
 ![QOLI interactive map](QOLI_map_preview.png)
 
