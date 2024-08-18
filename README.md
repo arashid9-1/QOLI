@@ -1,8 +1,8 @@
-## Quality of Life Index - England Councils
+# Quality of Life Index - England Councils
 
 ![QOLI interactive map](QOLI_map_preview.png)
 
-### Overview
+## Overview
 
 Using `Probabilistic Principal Component Analysis (PPCA)` from socioeconomic indicators relating to "Quality of Life", I created the Quality of Life Index (QOLI) ranking each 
 Local Authority from 0-100. The findings are displayed in an [interactive map](https://quality-of-life-index-england.netlify.app/) (Please do click the link). <br />
