@@ -26,7 +26,7 @@ For a detailed step-by-step methodology, refer to the [QOLI_notebook.ipynb](http
 
 ## Data Sources and Libraries
 
-All indicator data was obtained from [ONS' Local Statistics Databank](https://explore-local-statistics.beta.ons.gov.uk/). The raw downlaod and cleaned versions of the data can be found in [datadown.ods](https://github.com/arashid9-1/QOLI/blob/master/datadownload.ods) and [cleaned_merged_geodtab.csv](https://github.com/arashid9-1/QOLI/blob/master/cleaned_merged_geodtab.csv)
+All indicator data was obtained from [ONS' Local Statistics Databank](https://explore-local-statistics.beta.ons.gov.uk/). The raw download and cleaned versions of the data can be found in [datadown.ods](https://github.com/arashid9-1/QOLI/blob/master/datadownload.ods) and [cleaned_merged_geodtab.csv](https://github.com/arashid9-1/QOLI/blob/master/cleaned_merged_geodtab.csv)
 
 The geometry data mapping the MultiPoligon boundries for each LA District was created by [Martin JC](https://martinjc.github.io/UK-GeoJSON/).  <br />
 
@@ -36,13 +36,13 @@ All the standard `Python` libraries were used: `Scikit-learn` for the PPCA procc
 
 ### PPCA and the EM Algorithm
 
-Principal Component Analysis (PCA) is a multivariate technique used to reduce the dimensionality of data while minimising the loss of variance, allowing us to isolate the underlying common component within a set of variables. In this case, the common component represents "life satisfaction" or "quality of life." PCA works by performing eigenvalue decomposition on the correlation matrix of the variables, identifying the principal components, where each eigenvalue indicates the direction of maximum variance in the data. <br />
+Principal Component Analysis (PCA) is a multivariate technique used to reduce the dimensionality of data while minimising the loss of variance, allowing us to isolate the underlying common component within a set of variables. In this case, the common component represents "life satisfaction" or "quality of life." PCA works by performing eigenvalue decomposition on the correlation matrix of the variables, identifying the principal components, where each eigenvalue indicates the direction of maximum variance in the data [Chen et al. 2021](https://www.sciencedirect.com/science/article/abs/pii/S1059056021000277) . <br />
 
-There is however an issue on how to deal with missing values. Dropping an entire LA District for lacking the data for one indicator was not ideal, nor was using incurring unwanted noise or bias from using mean or median imputation.  This is where Probabilistic Principal Component Analysis (PPCA) comes into play. PPCA extends traditional PCA by assuming that the observed data comes from a latent variable model, where missing values can be estimated probabilistically. To handle the missing data, PPCA uses the Expectation-Maximization (EM) algorithm, which iteratively imputes the missing values. This iterative process continues until convergence, ensuring that the imputed values best fit the underlying structure (using Maximum Likelihood) of the data without introducing unnecessary noise, thus allowing for a more accurate calculation of the principal components and, ultimately, the Quality of Life Index (QOLI). <br />
+There is however an issue on how to deal with missing values. Dropping an entire LA District for lacking the data for one indicator was not ideal, nor was incurring unwanted noise or bias from using mean or median imputation. This is where Probabilistic Principal Component Analysis (PPCA) comes into play. PPCA extends traditional PCA by assuming that the observed data comes from a latent variable model, where missing values can be estimated probabilistically [Tipiing & Bishop, 1999](https://academic.oup.com/jrsssb/article/61/3/611/7083217). To handle the missing data, PPCA uses the Expectation-Maximisation (EM) algorithm, which iteratively imputes the missing values. This iterative process continues until convergence, ensuring that the imputed values best fit the underlying structure (using Maximum Likelihood) of the data without introducing unnecessary noise, thus allowing for a more accurate calculation of the principal components and, ultimately, the Quality of Life Index (QOLI). <br />
 
 ### QOLI Construction 
 
-After normalising the data and running the PPCA pipeline, the first three principal components explained the majority of the variance in the dataset. Examining the eigenvalues (factor loadings) of these components, it became apparent that Principal Component 1 (PC1) captured the commonality related to Quality of Life (QOL) across the socioeconomic indicators. <br />
+After normalising the data and running the PPCA pipeline, the first three principal components explained the majority of the variance in the dataset. Examining the eigenvectors (factor loadings) of these components, it became apparent that Principal Component 1 (PC1) captured the commonality related to Quality of Life (QOL) across the socioeconomic indicators. <br />
 
 |      | PC1   | PC2   | PC3   |
 |------|-------|-------|-------|
