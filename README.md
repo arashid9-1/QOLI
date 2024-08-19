@@ -18,8 +18,8 @@ Indicators Used in Index Construction:
 
 ### The top and bottom QOLI rankings:
 
-![Top 10 Councils](top10.png) <br />
-![Bottom 10 Councils](bottom10.png) <br />
+![Top 10 Councils](top10_1.png) <br />
+![Bottom 10 Councils](bottom10_1.png) <br />
 
 For a detailed step-by-step methodology, refer to the [QOLI_notebook.ipynb](https://github.com/arashid9-1/QOLI/blob/master/QOLI_notebook.ipynb) <br />
 
