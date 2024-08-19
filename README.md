@@ -4,7 +4,7 @@
 
 ## Overview
 
-The Quality of Life Index (QOLI) was constructed using Probabilistic Principal Component Analysis (PPCA) on key socioeconomic indicators. This index ranks each Local Authority in England on a scale from 0 to 100, based on their quality of life. The results are displayed in an [interactive map](https://quality-of-life-index-england.netlify.app/) (Please do click the link :D). <br />
+The Quality of Life Index (QOLI) was constructed using `Probabilistic Principal Component Analysis (PPCA)` on key socioeconomic indicators. This index ranks each Local Authority in England on a scale from 0 to 100, based on their quality of life. The results are displayed in an [interactive map](https://quality-of-life-index-england.netlify.app/) (Please do click the link :D). <br />
 
 Indicators Used in Index Construction:
 - i_1: Economic inactivity rate
